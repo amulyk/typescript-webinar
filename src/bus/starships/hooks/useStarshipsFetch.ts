@@ -12,11 +12,9 @@ export const useStarshipsFetch = (): StarshipsState => {
     dispatch(fetchAsync());
   }, [dispatch]);
 
-  const {
-    data,
-    isFetching,
-    error,
-  } = useSelector((state: AppState): StarshipsState => state.starships);
+  const { data, isFetching, error } = useSelector(
+    (state: AppState): StarshipsState => state.starships,
+  );
 
   return {
     data,

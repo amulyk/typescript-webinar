@@ -1,9 +1,6 @@
 // Instruments
 import {
-  startFetching,
-  stopFetching,
-  fill,
-  setFetchingError,
+  startFetching, stopFetching, fill, setFetchingError,
 } from '../../actions';
 
 import { api } from '../../../../api';

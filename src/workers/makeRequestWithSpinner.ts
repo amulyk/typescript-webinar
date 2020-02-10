@@ -1,10 +1,7 @@
 // Core
 import { ActionCreator, AnyAction } from 'redux';
 import { SagaIterator } from '@redux-saga/core';
-import {
-  put,
-  call,
-} from 'redux-saga/effects';
+import { put, call } from 'redux-saga/effects';
 
 import { FillActionType, ErrorActionType } from '../types';
 
@@ -19,12 +16,7 @@ type OptionsType<T> = {
 
 export function* makeRequestWithSpinner<T>(options: OptionsType<T>): SagaIterator {
   const {
-    fetcher,
-    fetcherParam,
-    startFetching,
-    stopFetching,
-    fill,
-    setErrorAction,
+    fetcher, fetcherParam, startFetching, stopFetching, fill, setErrorAction,
   } = options;
 
   try {
